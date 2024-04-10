@@ -22,14 +22,14 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: meta-introspector/checkout@main
+    - uses: meta-introspector/checkout@v3
 
     # setup action requirements
-    - uses: meta-introspector/setup-node@main
+    - uses: meta-introspector/setup-node@v3
       with:
         node-version: 18
 
-    - uses: meta-introspector/setup-ruby@main
+    - uses: meta-introspector/setup-ruby@v1
       with:
         ruby-version: ruby
 
@@ -42,7 +42,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
     # run licensed-ci to check and update licenses
-    - uses: github/licensed-ci@main
+    - uses: jonabc/licensed-ci@v1
       with:
         workflow: push_for_bots
         dependabot_skip: 'true'
