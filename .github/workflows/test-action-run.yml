@@ -16,16 +16,16 @@ jobs:
 
     steps:
       # checkout the repo
-      - uses: actions/checkout@v3
+      - uses: meta-introspector/checkout@v3
       
       # install ruby
-      - uses: ruby/setup-ruby@v1
+      - uses: meta-introspector/setup-ruby@v1
         with:
           bundler-cache: 'true'
           ruby-version: "3.0"
 
       # install node
-      - uses: actions/setup-node@v3
+      - uses: meta-introspector/setup-node@v3
         with:
           node-version: "18.x"
 
@@ -40,12 +40,12 @@ jobs:
 
     steps:
       # checkout the repo
-      - uses: actions/checkout@v3
+      - uses: meta-introspector/checkout@v3
       
       # do not install ruby
 
       # install node
-      - uses: actions/setup-node@v3
+      - uses: meta-introspector/setup-node@v3
         with:
           node-version: "18.x"
 

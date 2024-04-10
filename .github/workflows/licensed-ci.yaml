@@ -22,14 +22,14 @@ jobs:
       pull-requests: write
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: meta-introspector/checkout@v3
 
     # setup action requirements
-    - uses: actions/setup-node@v3
+    - uses: meta-introspector/setup-node@v3
       with:
         node-version: 18
 
-    - uses: ruby/setup-ruby@v1
+    - uses: meta-introspector/setup-ruby@v1
       with:
         ruby-version: ruby
 
